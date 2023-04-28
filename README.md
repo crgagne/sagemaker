@@ -2,9 +2,10 @@
 
 (0) check the region for aws cli `aws configure get region`
 
-(1) build docker image & upload to Amazon's ECR using `cd container` and `build_and_push.sh pytorch-extending-our-containers-bark`
+(1) build docker image & upload to Amazon's ECR using `cd container` and `./build_and_push.sh pytorch-extending-our-containers-bark`
 
 (2) test locally `docker run pytorch-extending-our-containers-bark:latest`
+(2a) test locally with aws creds `docker run -v $HOME/.aws/credentials:/root/.aws/credentials:ro pytorch-extending-our-containers-bark:latest`
 
 *Note: you can repeat steps 1 and 2 to edit the docker
 
